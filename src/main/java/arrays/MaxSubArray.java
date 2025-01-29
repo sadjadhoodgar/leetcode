@@ -6,14 +6,14 @@ package arrays;
  */
 public class MaxSubArray {
     public int maxSubArray(int[] nums) {
-        int answer = 0;
+        int maxSum = nums[0];
+        int currentSum = nums[0];
 
+        for (int i = 1; i < nums.length; i++) {
+            currentSum = Math.max(nums[i], currentSum + nums[i]);
+            maxSum = Math.max(maxSum, currentSum);
+        }
 
-
-        return answer;
+        return maxSum;
     }
 }
-
-
-
-//{-2,1,-3,4,-1,2,1,-5,4}
