@@ -13,14 +13,11 @@ public class LongestPalindrome {
         int start = 0, end = 0;
 
         for (int i = 0; i < s.length(); i++) {
-            // Odd-length palindromes (single character center)
             int len1 = expandAroundCenter(s, i, i);
-            // Even-length palindromes (two-character center)
             int len2 = expandAroundCenter(s, i, i + 1);
 
             int maxLen = Math.max(len1, len2);
 
-            // Update the start and end indices if we found a longer palindrome
             if (maxLen > (end - start)) {
                 start = i - (maxLen - 1) / 2;
                 end = i + maxLen / 2;
