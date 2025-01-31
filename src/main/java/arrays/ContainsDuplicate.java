@@ -3,7 +3,6 @@ package arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-
 /**
  * LeetCode Problem #217: Contains Duplicate.
  * Link: <a href="https://leetcode.com/problems/contains-duplicate/">...</a>
