@@ -1,13 +1,11 @@
 package linked_list;
 
-import support.ListNode;
-
 /**
  * LeetCode Problem #21: Merge Two Sorted Lists.
  * Link: <a href="https://leetcode.com/problems/merge-two-sorted-lists/">...</a>
  */
 public class MergeTwoLists {
-    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+    ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         ListNode dummy = new ListNode(-1);
         ListNode current = dummy;
 
@@ -31,4 +29,12 @@ public class MergeTwoLists {
         return dummy.next;
 
     }
+}
+
+class ListNode {
+    int val;
+    ListNode next;
+    ListNode() {}
+    ListNode(int val) { this.val = val; }
+    ListNode(int val, ListNode next) { this.val = val; this.next = next; }
 }
